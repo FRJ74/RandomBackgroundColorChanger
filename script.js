@@ -18,3 +18,17 @@ const darkColorsArr = [
   };
 
   const body = document.querySelector("body");
+  const bgHexCodeSpanElement = document.querySelector("#bg-hex-code");
+
+  function changeBackgroundColor() {
+    const color = darkColorsArr[getRandomIndex()];
+  
+    bgHexCodeSpanElement.innerText = color;
+    body.style.backgroundColor = color;
+  }
+
+
+  const btn = document.querySelector("#btn");
+
+  btn.onclick = changeBackgroundColor;
+    
